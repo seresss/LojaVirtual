@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_pedido: 1
+  id_cliente: 1
+  status: 1
+
+two:
+  id_pedido: 1
+  id_cliente: 1
+  status: 1
