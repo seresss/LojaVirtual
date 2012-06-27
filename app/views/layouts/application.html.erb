@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+   <head>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+
+       <title>Loja Virtual</title>
+   </head>
+   <body>
+      <div id="main">
+         <div id="header">
+            <img src="img/logotipo5.png" />
+         </div>
+         <div id="sidebar">
+            <ul id="menubv">
+            	<li><%= link_to 'Cadastre-se', new_cliente_path %></li>
+            	<% 
+            	@tipos = Tipo.all
+            	@tipos.each do |tipo| %>
+					<li><%= link_to tipo.nome, busca_produtos_path(:id => tipo.id) %></li>
+				<% end %>
+
+            </ul>
+             <br>&nbsp;
+             Usuário: <br>&nbsp;
+         </div>
+          
+         <div id="content">
+			<%= yield %>
+         </div>
+         <div id="footer"><center>
+             <br>&nbsp;
+             Loja Virtual
+             <br>&nbsp;
+                 </center>
+        </div>
+          
+      </div>
+   </body>
+</html>

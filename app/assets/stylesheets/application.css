@@ -1,0 +1,69 @@
+
+* { margin: 0px; /* padding: 0px; */ }
+body { 
+    background: #FFF; 
+    font: 12px Verdana, sans-serif; 
+}
+select {
+    width:200px;
+}
+div#main { 
+    margin: auto; 
+    width: 800px; 
+    background: #F2F2F2; 
+    overflow: auto; 
+}
+div#title { 
+    margin: auto; 
+    color: #FFF; 
+    background: #A4BFBD; 
+    width: 570px;  
+    font-weight:bold; 
+    padding: 5px; 
+    padding-bottom: 5px; 
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+
+
+div#header { background-color: #A4BFBD; color: #FFF; height: 80px; text-align: left ; /*margin-bottom: 10px;*/ }
+div#sidebar { background-color: #f2f2f2/*#487373*/; height: 100%; width: 200px; float: left; color: #487373; font-weight:bold;}
+/* div#sidebar ul { margin-left: 10px; margin-bottom: 10px; }  */
+div#content { width: 580px; float: right; padding: 10px; padding-bottom: 10px; padding-left: 10px;  }
+
+div#sidebar_login { background-color: #f2f2f2/*#487373*/; height: 100%; width: 100px; float: left; color: #487373; font-weight:bold;}
+/* div#sidebar ul { margin-left: 10px; margin-bottom: 10px; }  */
+div#content_login { width: 400px; float: right; padding: 10px; padding-bottom: 10px; padding-left: 10px;  }
+
+
+div#footer { background-color: #A4BFBD; clear: both; color: #487373; font-weight:bold; vertical-align: middle; }
+
+#menubv { width: 200px; padding: 0; margin: 0; font: 12px Verdana, sans-serif; }
+#menubv ul { list-style: none; margin: 0; padding: 0; }
+#menubv li { border-bottom: 1px solid #487373; margin: 0; }
+#menubv li a { display: block; padding: 5px 5px 5px 0.5em; font-weight:bold; 
+               border-left: 10px solid #487373; border-right: 0px solid #a4bfbd;
+               background-color: #58878c; color: #f2f2f2; text-decoration: none; }
+#menubv li a:hover { border-left: 10px solid #487373; border-right: 0px solid #a4bfbd;
+                     background-color: #f2f2f2; color: #58878c; }
+/* Fix IE. Hide from IE Mac \*/
+* html ul#menubv  li { float: left; height: 1%; }
+* html ul#menubv  li a { height: 1%; }
+/* End */
+
+
+.line{
+    height: 22px;
+    padding:0px;
+    clear:both;
+}
+
+.line_head{
+    font-weight: bold;
+    background-color: #A4BFBD;
+    background: #A4BFBD;
+    display:  table;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}

@@ -1,0 +1,27 @@
+<h1>Listing pedidos</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Id cliente</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pedidos.each do |pedido| %>
+  <tr>
+    <td><%= pedido.id %></td>
+    <td><%= pedido.id_cliente %></td>
+    <td><%= pedido.status %></td>
+    <td><%= link_to 'Show', pedido %></td>
+    <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
+    <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pedido', new_pedido_path %>
