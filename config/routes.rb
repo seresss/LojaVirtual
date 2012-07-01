@@ -1,4 +1,6 @@
 Loja::Application.routes.draw do
+  get "login/login"
+
   resources :tipos
 
   resources :produtos

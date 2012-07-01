@@ -27,7 +27,7 @@ div#title {
 
 
 
-div#header { background-color: #A4BFBD; color: #FFF; height: 80px; text-align: left ; /*margin-bottom: 10px;*/ }
+div#header { background-color: #A4BFBD; color: #FFF; height: 110px; text-align: center ; /*margin-bottom: 10px;*/ }
 div#sidebar { background-color: #f2f2f2/*#487373*/; height: 100%; width: 200px; float: left; color: #487373; font-weight:bold;}
 /* div#sidebar ul { margin-left: 10px; margin-bottom: 10px; }  */
 div#content { width: 580px; float: right; padding: 10px; padding-bottom: 10px; padding-left: 10px;  }
