@@ -1,0 +1,13 @@
+
+  <h1>Login</h1>
+  <%= form_tag :action => 'process_login' 
+  %>
+  Username: <%= text_field "user", "username" %><br>&#x00A;
+    Password: <%= password_field "user", "password" %><br>&#x00A;
+<br>
+    <%= submit_tag 'Login' %>
+
+<% if flash[:message] %><div><%= flash[:message] %></div><% end %>
+  <% if flash[:error] %><div><%= flash[:error] %></div><% end %>
+
+

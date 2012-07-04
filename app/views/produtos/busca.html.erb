@@ -1,21 +1,17 @@
-<h1>Lista de produtos</h1>
+<h1>Lista de Produtos</h1>
 
 <table>
   <tr>
     <th>Nome</th>
-    <th>Tipo</th>
-    <th>Descricao</th>
     <th>Valor</th>
     <th></th>
   </tr>
 
-<% @produtos.each do |produto| %>
+<% @produtos.each do |prod| %>
   <tr>
-    <td><%= produto.nome %></td>
-    <td><%= produto.tipo %></td>
-    <td><%= produto.descricao %></td>
-    <td><%= produto.valor %></td>
-    <td><%= link_to 'Detalhes', produto %></td>
+    <td><%= prod.nome %></td>
+    <td><%= prod.valor %></td>
+    <td><%= link_to 'Detalhes', prod %></td>
   </tr>
 <% end %>
 </table>

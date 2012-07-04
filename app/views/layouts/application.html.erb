@@ -16,7 +16,12 @@
          </div>
          <div id="sidebar">
             <ul id="menubv">
+            	<% if !session[:id] %>
             	<li><%= link_to 'Cadastre-se', new_cliente_path %></li>
+	            <li><%= link_to 'Entrar', clientes_login_path %></li>
+            	<% else %>
+            	<li><%= link_to 'Sair', clientes_logout_path %></li>
+            	<% end %>
             	<% 
             	@tipos = Tipo.all
             	@tipos.each do |tipo| %>
@@ -25,7 +30,10 @@
 
             </ul>
              <br>&nbsp;
-             Usuário: <br>&nbsp;
+             <% if session[:id] %>
+             	Usuário: &nbsp;
+             	<%= Cliente.find(session[:id]).email %><br>
+             <% end %><br>&nbsp;
          </div>
           
          <div id="content">

@@ -1,4 +1,28 @@
 Loja::Application.routes.draw do
+  get "clientes/login"
+
+  get "clientes/process_login"
+
+  get "clientes/logout"
+
+  get "clientes/my_account"
+
+  get "clienter/login"
+
+  get "clienter/process_login"
+
+  get "clienter/logount"
+
+  get "clienter/my_account"
+
+  get "user/login"
+
+  get "user/process_login"
+
+  get "user/logount"
+
+  get "user/my_account"
+
   get "login/login"
 
   resources :tipos
@@ -62,7 +86,9 @@ Loja::Application.routes.draw do
   # just remember to delete public/index.html.
    root :to => 'home#index'
    match 'produtos/:id/busca' => 'produtos#busca' , :as => :busca_produtos, :via => :get
-   
+   match 'clientes/process_login' => 'clientes#process_login', :via => [:get, :post]
+   match 'clientes/login' => 'clientes#login', :as => :clientes_login, :via => [:get, :post]
+   match 'clientes/logout' => 'clientes#logout', :as => :clientes_logout, :via => [:get, :post]
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

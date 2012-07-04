@@ -80,4 +80,32 @@ class ClientesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+
+    def login
+      @cliente = Cliente.new
+      @cliente.email = params[:username]
+    end
+
+    def process_login
+      if cliente = Cliente.authenticate(params[:user][:username],params[:user][:password])
+        session[:id] = cliente.id # Remember the user's id during this session
+        redirect_to session[:return_to] || '/'
+      else
+        flash[:error] = 'Usuario ou senha invalidos.'
+        redirect_to :action => 'login' #, :username => params[:user][:username]
+      end
+    end
+
+    def logout
+      reset_session
+      flash[:message] = 'Sessao encerrada.'
+      redirect_to :action => 'login'
+    end
+
+    def my_account
+    end
+
+
+  
 end
